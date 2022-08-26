@@ -140,66 +140,66 @@ function newMember() {
 		});
 }
 
-// the following will collect data for Engineer
+// collect data
 function addEngineer() {
 	inquirer
 		.prompt([
 			{
-				name: 'name',
-				type: 'input',
-				message: "What is your Engineer's name?",
+				name: "name",
+				type: "input",
+				message: "Engineer's name?",
 				validate: (input) => {
 					if (input) {
 						return true;
 					} else {
-						console.log('--- NOT A VALID INPUT... TRY AGAIN ---');
+						console.log("--- NOT VALID...TRY AGAIN! ---");
 						return false;
 					}
 				},
 			},
 			{
-				name: 'id',
-				type: 'input',
-				message: "Enter Engineer's Employee ID number:",
+				name: "id",
+				type: "input",
+				message: "Enter Employee ID number:",
 				validate: (input) => {
 					if (input) {
 						return true;
 					} else {
-						console.log('--- NOT A VALID INPUT... TRY AGAIN ---');
+						console.log("--- NOT VALID...TRY AGAIN! ---");
 						return false;
 					}
 				},
 			},
 			{
-				name: 'email',
-				type: 'input',
-				message: "Enter Engineer's email address:",
+				name: "email",
+				type: "input",
+				message: "Enter email address:",
 				validate: (input) => {
 					if (input) {
 						return true;
 					} else {
-						console.log('--- NOT A VALID INPUT... TRY AGAIN ---');
+						console.log("--- NOT VALID...TRY AGAIN! ---");
 						return false;
 					}
 				},
 			},
 			{
-				name: 'gitHub',
-				type: 'input',
-				message: "Enter Engineer's GitHub username:",
+				name: "gitHub",
+				type: "input",
+				message: "Enter GitHub username:",
 				validate: (input) => {
 					if (input) {
 						return true;
 					} else {
-						console.log('--- NOT A VALID INPUT... TRY AGAIN ---');
+						console.log("--- NOT VALID...TRY AGAIN! ---");
 						return false;
 					}
 				},
 			},
 			{
-				name: 'nextEmp',
-				type: 'confirm',
-				message: 'Would you like to add another employee?',
+				name: "nextEmp",
+				type: "confirm",
+				message: "Would you like to add another employee?",
 			},
 		])
 		.then((res, err) => {
@@ -219,66 +219,67 @@ function addEngineer() {
 		});
 }
 
-// the following will collect data for Intern
+// collect data
 function addIntern() {
 	inquirer
 		.prompt([
 			{
-				name: 'name',
-				type: 'input',
-				message: "What is your Intern's name?",
+				name: "name",
+				type: "input",
+				message: "Intern's name?",
 				validate: (input) => {
 					if (input) {
 						return true;
 					} else {
-						console.log('--- NOT A VALID INPUT... TRY AGAIN ---');
+						console.log("--- NOT VALID...TRY AGAIN! ---");
 						return false;
 					}
 				},
 			},
 			{
-				name: 'id',
-				type: 'input',
-				message: "Enter Intern's Employee ID number:",
+				name: "id",
+				type: "input",
+				message: "Enter ID number:",
 				validate: (input) => {
 					if (input) {
 						return true;
 					} else {
-						console.log('--- NOT A VALID INPUT... TRY AGAIN ---');
+						console.log("--- NOT VALID...TRY AGAIN! ---");
 						return false;
 					}
 				},
 			},
 			{
-				name: 'email',
-				type: 'input',
-				message: "Enter Intern's email address:",
+				name: "email",
+				type: "input",
+				message: "Enter email address:",
 				validate: (input) => {
 					if (input) {
 						return true;
 					} else {
-						console.log('--- NOT A VALID INPUT... TRY AGAIN ---');
+						console.log("--- NOT VALID...TRY AGAIN! ---");
 						return false;
 					}
 				},
 			},
 			{
-				name: 'school',
-				type: 'input',
+				name: "school",
+				type: "input",
 				message: "Enter Intern's School:",
 				validate: (input) => {
 					if (input) {
 						return true;
 					} else {
-						console.log('--- NOT A VALID INPUT... TRY AGAIN ---');
+						console.log("--- NOT VALID...TRY AGAIN! ---");
 						return false;
 					}
 				},
 			},
+            //next question/verifcation
 			{
-				name: 'nextEmp',
-				type: 'confirm',
-				message: 'Would you like to add another employee?',
+				name: "nextEmp",
+				type: "confirm",
+				message: "Would you like to add another employee?",
 			},
 		])
 		.then((res, err) => {
@@ -299,8 +300,8 @@ function addIntern() {
 		});
 }
 
-// create function to render team to HTML page using cards and template literals
-// will loop through array of objects to render each employee to their own card
+// Team HTML page
+// loop through arrays
 function renderTeam() {
 	const htmlPageContent = [];
 	const htmlPageHead = `
@@ -391,9 +392,8 @@ function renderTeam() {
 	htmlPageContent.push(htmlFoot);
 
 	fs.writeFile('dist/index.html', htmlPageContent.join(''), (err) =>
-		err ? console.log(err) : console.log('Successfully created index.html!')
+		err ? console.log(err) : console.log("Created index.html!")
 	);
 }
 
-// start application
 startApp();
