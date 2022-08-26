@@ -2,5 +2,26 @@
   "dependencies": {
     "inquirer": "^9.1.0",
     "jest": "^29.0.1"
-  }
+  },
+  "name": "team-profile-generator.2",
+  "description": "profile generator",
+  "version": "1.0.0",
+  "main": "Index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fheezy/Team-Profile-Generator.2.git"
+  },
+  "author": "farhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fheezy/Team-Profile-Generator.2/issues"
+  },
+  "homepage": "https://github.com/fheezy/Team-Profile-Generator.2#readme"
 }
