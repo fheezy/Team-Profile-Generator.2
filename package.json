@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "got": "^11.8.3",
     "inquirer": "^9.1.0",
-    "jest": "^29.0.1"
+    "jest": "^29.0.1",
+    "node-fetch": "^2.6.6"
   },
   "name": "team-profile-generator.2",
   "description": "profile generator",
@@ -10,9 +12,8 @@
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
